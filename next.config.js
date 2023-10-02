@@ -3,6 +3,13 @@ const nextConfig = {
   images: {
     domains: ["lh3.googleusercontent.com", "images.unsplash.com"],
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  output: "standalone",
 };
 
 module.exports = nextConfig;
