@@ -25,10 +25,15 @@ export async function POST(req: Request) {
     }
 
     const isSubscribed = await checkSubscription();
-    if (session.user.credits <= 0 && !isSubscribed) {
+    //on production
+    // if (session.user.credits <= 0 && !isSubscribed) {
+    //   return new NextResponse("no credits", { status: 402 });
+    // }
+
+    //but we only give 1 credit and payment is in test mode
+    if (session.user.credits <= 0) {
       return new NextResponse("no credits", { status: 402 });
     }
-
     const body = await req.json();
     const { title, units } = createCourseSchema.parse(body);
 

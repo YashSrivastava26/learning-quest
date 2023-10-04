@@ -43,6 +43,7 @@ export async function POST(req: Request) {
       },
     });
   }
+  console.log(event.type);
 
   //automatically deduct for monthly payment
   if (event.type === "invoice.payment_succeeded") {

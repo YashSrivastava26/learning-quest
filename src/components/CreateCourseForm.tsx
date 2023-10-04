@@ -160,7 +160,8 @@ const CreateCourseForm: FC<CreateCourseFormProps> = ({ isSubscribed }) => {
           </Button>
         </form>
       </Form>
-      {!isSubscribed && <SubscriptionCredits />}
+      {/* {!isSubscribed && <SubscriptionCredits />} */}
+      <SubscriptionCredits isSubscribed={isSubscribed} />
     </div>
   );
 };

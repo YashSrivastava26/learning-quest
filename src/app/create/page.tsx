@@ -28,7 +28,7 @@ const page: FC<pageProps> = async ({}) => {
           our AI will generate a course for you!!{" "}
         </div>
       </div>
-      <CreateCourseForm isSubscribed />
+      <CreateCourseForm isSubscribed={isSubscribed} />
     </div>
   );
 };
